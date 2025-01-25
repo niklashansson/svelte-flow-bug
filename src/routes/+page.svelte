@@ -56,7 +56,8 @@
       {edges}
       fitView
       panOnDrag={false}
-      on:nodeclick={(event) => console.log('on node click', event.detail.node)}
+      on:nodedragstop={event => { console.log('on node drag stop', event.detail.targetNode) }}
+      nodeDragThreshold={0}
     >
       <Controls />
       <Background variant={BackgroundVariant.Dots} />
